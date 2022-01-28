@@ -10,9 +10,8 @@ export default function App() {
     <>
       <Header/>
       <Routes>
-        <Route path="/" element={<TextForm/>} />
-        <Route path="home" element={<TextForm/>} />
-        <Route path="about" element={<Footer/>} />
+        <Route path="texttransform" element={<TextForm/>} />
+        <Route path="texttransform/about" element={<Footer/>} />
       </Routes>
     </>
   );

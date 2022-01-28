@@ -9,7 +9,7 @@ export default function Footer() {
     <h3>
       And Text Transform is a basic project created by me for learning react.
     </h3>
-    <Link to="/"><button className="footer-btn">Click Here For Homepage</button></Link>
+    <Link to="/texttransform"><button className="footer-btn">Click Here For Homepage</button></Link>
     </footer>
   );
 }
