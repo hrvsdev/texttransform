@@ -11,7 +11,7 @@ export default function Header(props) {
   return (
     <>
       <nav className="main-nav">
-        <Link to="/" className="left-sec">
+        <Link to="home" className="left-sec">
           <img src="https://i.ibb.co/gzzNwkp/text.png" alt="" />
           <div className="main-text">Text Transform</div>
         </Link>
