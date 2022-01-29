@@ -8,16 +8,9 @@ export default function TextForm() {
     setText(e.target.value);
   }
   function wordCounter() {
-    if (text !== "") {
-      return text
-        .replace(/[^A-Za-z]\s+/g, " ")
-        .trim()
-        .split(" ").length;
-    } else {
-      return 0;
-    }
+    if (text !== "") { return text.replace(/[^A-Za-z]\s+/g, " ").trim().split(" ").length; }
+    else { return 0; }
   }
-
   function upperCase() {
     setText((prev) => prev.toUpperCase());
   }
@@ -51,12 +44,12 @@ export default function TextForm() {
       </div>
 
       <div className="button-sec">
-        <Button {...buttonData[0]} clickFunc={upperCase} />
-        <Button {...buttonData[1]} clickFunc={lowerCase} />
-        <Button {...buttonData[2]} clickFunc={titleCase} />
-        <Button {...buttonData[3]} clickFunc={extraSpace} />
-        <Button {...buttonData[4]} clickFunc={copyText} />
-        <Button {...buttonData[5]} clickFunc={clearText} />
+        <Button disabled={text === ""} {...buttonData[0]} clickFunc={upperCase} />
+        <Button disabled={text === ""} {...buttonData[1]} clickFunc={lowerCase} />
+        <Button disabled={text === ""} {...buttonData[2]} clickFunc={titleCase} />
+        <Button disabled={text === ""} {...buttonData[3]} clickFunc={extraSpace} />
+        <Button disabled={text === ""} {...buttonData[4]} clickFunc={copyText} />
+        <Button disabled={text === ""} {...buttonData[5]} clickFunc={clearText} />
       </div>
       <div className="text-info">
         There are <b>{text.length} characters</b> and{" "}
